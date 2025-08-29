@@ -1,0 +1,18 @@
+{
+  "name": "liquidity-model-updater",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Standalone updater to fetch logs, build token graphs, and sync to S3.",
+  "scripts": {
+    "update": "node update_token_graphs.js",
+    "graph": "node token_graph.js"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.609.0",
+    "csv-parse": "^5.5.6",
+    "dotenv": "^16.4.5",
+    "ethers": "^6.13.1",
+    "yargs": "^17.7.2"
+  }
+}
