@@ -1,0 +1,23 @@
+{
+  "name": "apy-data-miner-collector",
+  "version": "1.0.0",
+  "description": "Daily collector for Uniswap V3 swap transactions",
+  "type": "module",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "LOCAL_TEST=true node index.mjs",
+    "deploy": "npm run build && aws lambda update-function-code --function-name apy-data-miner-collector --zip-file fileb://dist/collector.zip",
+    "build": "mkdir -p dist && zip -r dist/collector.zip index.mjs lib/ node_modules/"
+  },
+  "dependencies": {
+    "ethers": "^6.9.0",
+    "pg": "^8.11.3",
+    "@aws-sdk/client-secrets-manager": "^3.470.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.3.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

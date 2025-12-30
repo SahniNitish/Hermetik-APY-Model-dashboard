@@ -1,0 +1,20 @@
+node_modules/
+*.zip
+.env
+.DS_Store
+
+# Documentation (keep locally, not in repo)
+!README.md
+CLAUDE.md
+PIPELINE_DOCUMENTATION.md
+TECHNICAL_REPORT_NITISH.md
+BRENDAN_TIMELINE.md
+*.docx
+
+# Build artifacts
+.aws-sam/
+
+# Large CSV files (download from S3 instead)
+*.csv
+exports/
+updater/static/
