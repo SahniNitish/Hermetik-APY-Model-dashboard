@@ -1,1 +1,0 @@
-# APY_MODEL
