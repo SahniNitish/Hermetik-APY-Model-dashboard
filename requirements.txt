@@ -1,6 +1,0 @@
-modal
-pandas
-boto3
-networkx
-scikit-learn
-web3 
